@@ -4,7 +4,7 @@ import line.DashedLine;
 import line.DottedLine;
 import line.PlainLine;
 
-public class Java2DDisplay implements Display {
+public class Java2DDisplay extends Display {
 
 	protected Java2DCanvas display;
 

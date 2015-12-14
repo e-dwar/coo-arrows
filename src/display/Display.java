@@ -1,14 +1,22 @@
 package display;
 
+import arrow.Arrow;
 import line.DashedLine;
 import line.DottedLine;
+import line.Line;
 import line.PlainLine;
 
-public interface Display {
+public abstract class Display {
 
-	public void visitPlainLine(PlainLine line);
+	public abstract void visitPlainLine(PlainLine line);
 
-	public void visitDottedLine(DottedLine line);
+	public abstract void visitDottedLine(DottedLine line);
 
-	public void visitDashedLine(DashedLine line);
+	public abstract void visitDashedLine(DashedLine line);
+
+	public void visitArrow(Arrow arrow) {
+		for (Line line : arrow.head) {
+			line.accept(this);
+		}
+	}
 }

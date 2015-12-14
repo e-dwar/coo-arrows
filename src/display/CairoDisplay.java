@@ -2,7 +2,7 @@ package display;
 
 import line.*;
 
-public class CairoDisplay implements Display {
+public class CairoDisplay extends Display {
 
 	protected CairoCanvas display;
 
