@@ -8,14 +8,14 @@ import line.Line;
 import display.Display;
 
 public abstract class Arrow {
-	
-	public Collection<Line> head;
 
-	public Arrow() {
-		this.head = new ArrayList<Line>();
-	}
+    public Collection<Line> head;
 
-	public void accept(Display display) {
-		display.visitArrow(this);
-	}
+    public Arrow() {
+        this.head = new ArrayList<Line>();
+    }
+
+    public void accept(Display display) {
+        display.visitArrow(this);
+    }
 }
